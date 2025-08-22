@@ -10,17 +10,17 @@ export const sajuData = {
     ],
     // 천간
     elements2: [
-      ["임", "壬", "陽水"],
-      ["정", "丁", "陰火"],
-      ["계", "癸", "陰水"],
-      ["계", "癸", "陰水"],
+      { text: ["임", "壬", "陽水"], color: "bg-black text-white" },
+      { text: ["정", "丁", "陰火"], color: "bg-red-700 text-white" },
+      { text: ["계", "癸", "陰水"], color: "bg-black text-white" },
+      { text: ["계", "癸", "陰水"], color: "bg-black text-white" },
     ],
     // 지지
     elements3: [
-      ["인", "寅", "陽木"],
-      ["사", "巳", "陰火"],
-      ["해", "亥", "陰陰"],
-      ["유", "酉", "金陰"],
+      { text: ["인", "寅", "陽木"], color: "bg-cyan-600 text-white" },
+      { text: ["사", "巳", "陰火"], color: "bg-red-700 text-white" },
+      { text: ["해", "亥", "陰陰"], color: "bg-black text-white" },
+      { text: ["유", "酉", "金陰"], color: "bg-white border-1 text-black" },
     ],
     // 십성 (두 번째)
     elements4: [
