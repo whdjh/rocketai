@@ -7,12 +7,12 @@ export default function Home() {
     <div className="bg-F3F2EF">
       <div className="min-[475px]:block">
         <div className="relative min-w-[475px] max-w-md mx-auto px-4">
-          <p className="absolute top-[790px] left-[85px] text-[16px] whitespace-pre-line font-normal leading-[150%] tracking-[-0.025em] text-center">
+          <p className="absolute top-[785px] left-[100px] text-[16px] whitespace-pre-line font-normal leading-[150%] tracking-[-0.025em] text-center">
             이제부터 본격적으로{"\n"}
             {sajuData.name}님의 사주팔자를{"\n"}
             분석해볼 차례네요.
           </p>
-          <p className="absolute top-[1230px] left-[95px] text-[16px] whitespace-pre-line font-normal leading-[150%] tracking-[-0.025em] text-center">
+          <p className="absolute top-[1215px] left-[100px] text-[16px] whitespace-pre-line font-normal leading-[150%] tracking-[-0.025em] text-center">
             제가 {sajuData.name}님의 사주를{"\n"}
             보기 쉽게 표로 정리했어요.
           </p>

@@ -5,11 +5,11 @@ import { sajuData } from "@/mocks/saju";
 const TableHeader = () => (
   <thead>
     <tr>
-      <td className="border border-b-2 border-r-2 border-l-0 border-t-0 p-2"></td>
-      <td className="border border-b-2 border-t-0 p-2">時</td>
-      <td className="border border-b-2 border-t-0 p-2">日</td>
-      <td className="border border-b-2 border-t-0 p-2">月</td>
-      <td className="border border-b-2 border-r-2 border-t-0 p-2">年</td>
+      <td className="border border-b-2 border-r-2 border-l-0 border-t-0 p-2 w-[20%]"></td>
+      <td className="border border-b-2 border-t-0 p-2 w-[20%]">時</td>
+      <td className="border border-b-2 border-t-0 p-2 w-[20%]">日</td>
+      <td className="border border-b-2 border-t-0 p-2 w-[20%]">月</td>
+      <td className="border border-b-2 border-r-2 border-t-0 p-2 w-[20%]">年</td>
     </tr>
   </thead>
 );
@@ -24,7 +24,7 @@ const TableRow = ({ label, labelSub, elements, isLast = false }) => {
   return (
     <tr>
       <td
-        className={`${rightBorderClass} border-l-0 p-2 text-center leading-tight whitespace-nowrap`}
+        className={`${rightBorderClass} border-l-0 p-2 text-center leading-tight whitespace-nowrap w-[20%]`}
       >
         <p className="text-[14px] font-medium">{label}</p>
         <p className="text-[10px] text-gray-500">{labelSub}</p>
@@ -32,7 +32,7 @@ const TableRow = ({ label, labelSub, elements, isLast = false }) => {
       {elements.map((element, index) => (
         <td
           key={index}
-          className={`${index === 3 ? rightBorderClass : borderClass} p-2`}
+          className={`${index === 3 ? rightBorderClass : borderClass} p-2 w-[20%]`}
         >
           <p className="text-[14px] font-medium">{element[0]}</p>
           <p className="text-[10px] text-gray-500">{element[1]}</p>
@@ -52,7 +52,7 @@ const ElementRow = ({ label, labelSub, elements, colors, isLast = false }) => {
   return (
     <tr>
       <td
-        className={`${rightBorderClass} border-l-0 p-2 text-center leading-tight`}
+        className={`${rightBorderClass} border-l-0 p-2 text-center leading-tight w-[20%]`}
       >
         <p className="text-[14px] font-medium">{label}</p>
         <p className="text-[10px] text-gray-500">{labelSub}</p>
@@ -60,7 +60,7 @@ const ElementRow = ({ label, labelSub, elements, colors, isLast = false }) => {
       {elements.map((element, index) => (
         <td
           key={index}
-          className={`${index === 3 ? rightBorderClass : borderClass} p-1`}
+          className={`${index === 3 ? rightBorderClass : borderClass} p-1 w-[20%]`}
         >
           <div
             className={`${colors[index]} rounded-md p-2 flex flex-col items-center justify-center leading-none`}
@@ -78,21 +78,21 @@ const ElementRow = ({ label, labelSub, elements, colors, isLast = false }) => {
 // 귀인 행 컴포넌트
 const GuiinRow = ({ elements }) => (
   <tr>
-    <td className="border border-b-2 border-r-2 border-l-0 p-2 text-center leading-tight whitespace-nowrap">
+    <td className="border border-b-2 border-r-2 border-l-0 p-2 text-center leading-tight whitespace-nowrap w-[20%]">
       <p className="text-[14px] font-medium">貴人</p>
       <p className="text-[10px] text-gray-500">(귀인)</p>
     </td>
     {elements.map((element, index) => {
       if (index < 2) {
         return (
-          <td key={index} className="border border-b-2 p-2">
+          <td key={index} className="border border-b-2 p-2 w-[20%]">
             <p className="text-[14px] font-medium">{element[0]}</p>
             <p className="text-[10px] text-gray-500">{element[1]}</p>
           </td>
         );
       } else if (index === 2) {
         return (
-          <td key={index} className="border border-b-2 p-2">
+          <td key={index} className="border border-b-2 p-2 w-[20%]">
             <p className="text-[14px] font-medium">{element[0]}</p>
             <p className="text-[10px] text-gray-500">{element[1]}</p>
           </td>
@@ -101,7 +101,7 @@ const GuiinRow = ({ elements }) => (
         return (
           <td
             key={index}
-            className="border border-b-2 border-r-2 border-t-0 p-2"
+            className="border border-b-2 border-r-2 border-t-0 p-2 w-[20%]"
           >
             {element.map((subElement, subIndex) => (
               <div key={subIndex}>
@@ -165,7 +165,7 @@ export const SajuTable = () => {
 
   const jijiColors = [
     "bg-cyan-600 text-white",
-    "bg-black text-white",
+    "bg-red-700 text-white",
     "bg-black text-white",
     "bg-white border-1 text-black",
   ];
